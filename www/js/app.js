@@ -1,5 +1,4 @@
 var num_3 = 0;
-Listo();
 
 function cargaContextoCanvas(idCanvas){
    var elemento = document.getElementById(idCanvas);
@@ -19,8 +18,15 @@ function aleatorio(inferior,superior){
    return parseInt(inferior) + aleat
 }
 
+function setNum(num){
+   num_3 = num;
+}
 
-function Listo(){
+function getNum(){
+   return num_3;
+}
+
+window.onload = function(){
    //Recibimos el elemento canvas
    var ctx = cargaContextoCanvas('micanvas');
    ctx.fillStyle="#333";
@@ -38,6 +44,7 @@ function Listo(){
       img.onload = function(){
          //incluyo la imagen en el canvas
          num_3 = Math.floor((Math.random() * 4) + 1);
+         setNum(num_3);
          x = 0;
          for(i=0; i<num_3; i++){
             if(i!=0){
@@ -52,13 +59,12 @@ function Listo(){
 }
 
 $(document).ready(function(){
-   Listo();
    var num2 = Math.floor((Math.random() * 4) + 1);
    for(i=0;i<num2;i++){
       var num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
-      var t = document.createTextNode(num_3);
+      var t = document.createTextNode(getNum());
       boton.appendChild(t);
       $("#botonnum").append(boton);
    }
