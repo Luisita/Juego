@@ -58,20 +58,23 @@ window.onload = function(){
    }
 
    var num2 = Math.floor((Math.random() * 4) + 1);
+   var num3 = Math.floor((Math.random() * 4) + 1);
    for(i=0;i<num2;i++){
       var num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
-      var t = document.createTextNode(num_3);
+      var t;
+      if(num3==num2){
+         t = document.createTextNode(num_3);
+      }else{
+         t = document.createTextNode(num);
+      }
       boton.appendChild(t);
       $("#botonnum").append(boton);
    }
 
    $("button").click(function(){
-      div= document.getElementById("micanvas");.innerHTML;
-      partidos = div.match(/<img/);
-      numMatches = matches.length;
-      alert(numMatches);
+      alert("botton");
    });
 
 }
