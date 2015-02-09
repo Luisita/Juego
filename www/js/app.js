@@ -56,15 +56,13 @@ window.onload = function(){
          }
       }
    }
-}
 
-$(document).ready(function(){
    var num2 = Math.floor((Math.random() * 4) + 1);
    for(i=0;i<num2;i++){
       var num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
-      var t = document.createTextNode(getNum());
+      var t = document.createTextNode(num_3);
       boton.appendChild(t);
       $("#botonnum").append(boton);
    }
@@ -73,4 +71,4 @@ $(document).ready(function(){
       alert("boton");
    });
 
-});
+}
