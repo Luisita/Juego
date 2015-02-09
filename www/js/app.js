@@ -74,7 +74,8 @@ window.onload = function(){
    }
 
    $("button").click(function(){
-      alert("botton");
+      numero = document.getElementsByTagName("button");
+      alert(numero);
    });
 
 }
