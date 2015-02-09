@@ -1,4 +1,4 @@
-var num_3 = 0;
+
 
 function cargaContextoCanvas(idCanvas){
    var elemento = document.getElementById(idCanvas);
@@ -28,6 +28,7 @@ function getNum(){
 
 window.onload = function(){
    //Recibimos el elemento canvas
+   var num_3 = 0;
    var ctx = cargaContextoCanvas('micanvas');
    ctx.fillStyle="#333";
    ctx.font="bold 20px sans-serif";
@@ -44,7 +45,6 @@ window.onload = function(){
       img.onload = function(){
          //incluyo la imagen en el canvas
          num_3 = Math.floor((Math.random() * 4) + 1);
-         setNum(num_3);
          x = 0;
          for(i=0; i<num_3; i++){
             if(i!=0){
