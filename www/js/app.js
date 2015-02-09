@@ -1,4 +1,5 @@
 var num_3 = 0;
+Listo();
 
 function cargaContextoCanvas(idCanvas){
    var elemento = document.getElementById(idCanvas);
@@ -51,6 +52,7 @@ function Listo(){
 }
 
 $(document).ready(function(){
+   Listo();
    var num2 = Math.floor((Math.random() * 4) + 1);
    for(i=0;i<num2;i++){
       var num = Math.floor((Math.random() * 10) + 1);
