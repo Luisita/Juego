@@ -70,16 +70,14 @@ window.onload = function(){
          t = document.createTextNode(num);
       }
       boton.appendChild(t);
-      var element = document.getElementById("b"+i);
-      element.appendChild(boton);
+     // var element = document.getElementById("b"+i);
+      //element.appendChild(boton);
       $("#botonnum").append(boton);
    }
 
-   for (i=0; i<4;i++){
-      $("#b"+i).click(function(){
-         numero = document.getElementsByName("b"+i);
+   $("#b"+i).click(function(){
+      numero = document.getElementsByTagName("button");
 
-         alert(numero);
-      });
-   }
+      alert(numero[1]);
+   });
 }
