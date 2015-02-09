@@ -55,7 +55,7 @@ $(document).ready(function(){
       num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
-      var t = document.createTextNode(num3);
+      var t = document.createTextNode(num);
       boton.appendChild(t);
       $("#botonnum").append(boton);
    }
