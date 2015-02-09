@@ -20,6 +20,10 @@ function aleatorio(inferior,superior){
 window.onload = function(){
    //Recibimos el elemento canvas
    var ctx = cargaContextoCanvas('micanvas');
+   ctx.fillStyle="#333";
+   ctx.font="bold 64px sans-serif";
+   ctx.textBaseline="top";
+   ctx.fillText('Puntaje: 0',5, 10);
    if(ctx){
       //Creo una imagen conun objeto Image de Javascript
       var imagenes=['fresa','manzana','naranja','pera','uva']
@@ -30,17 +34,27 @@ window.onload = function(){
       //defino el evento onload del objeto imagen
       img.onload = function(){
          //incluyo la imagen en el canvas
-         num = Math.floor((Math.random() * 10) + 1);
-         num2 = Math.floor((Math.random() * 5) + 1);
+         var num2 = Math.floor((Math.random() * 4) + 1);
          x = 0;
          for(i=0; i<num2; i++){
             if(i!=0){
                x = x+80;
             }else{
-               x = x + 10;
+               x = x + 5;
             }
-            ctx.drawImage(img, x, 10);
+            ctx.drawImage(img, x, 50);
          }
       }
    }
 }
+
+$(document).ready(function(){
+   num = Math.floor((Math.random() * 10) + 1);
+   num2 = Math.floor((Math.random() * 4) + 1);
+   for(i=0;i<num2;i++){
+      num = Math.floor((Math.random() * 10) + 1);
+      var boton = document.createElement("button");
+      boton.type = "button";
+      document.body.appendChild(boton);
+   }
+});
