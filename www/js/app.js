@@ -55,6 +55,13 @@ $(document).ready(function(){
       num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
+      var t = document.createTextNode(num2);
+      boton.appendChild(t);
+      boton.click(function(){
+         alert(num2);
+      });
       $("#botonnum").append(boton);
+
    }
+
 });
