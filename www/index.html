@@ -29,49 +29,12 @@
         <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
         <link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
-        <link type="text/css" href="css/cupertino/jquery-ui-1.8.1.custom.css" rel="Stylesheet" /> 
         <link rel="stylesheet" href="css/index.css" />
         <script src="js/jquery-2.0.0.min.js"></script>
         <script src="js/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <title>Juego</title>
-        <style type="text/css">
-        body{
-           font-size: 0.7em;
-           font-family: Trebuchet MS, verdana, arial, sans-serif;
-        }
-        .botonletra{
-           font-size: 0.9em;
-           margin: 2px;
-           width: 30px;
-           text-align: center;
-        }
-        .dialogletra{
-           font-size: 3em;
-           text-align: center;
-           padding-top: 15px;
-        }
-        #botonesletras{
-           width: 330px;
-           clear: both;
-        }
-        #dibujoahorcado{
-           margin-bottom: 20px;
-        }
-        #letras{
-           font-size: 3em;
-           text-align:center;
-           width: 320px;
-           clear: both;
-           margin-bottom: 10px;
-        }
-        #letras span{
-           width: 30px;
-           text-align:center;
-           padding-left: 5px;
-        }
-        </style>
     </head>
     <body>
         <div class="pag" id="index" data-role="page" data-theme="a">
@@ -80,11 +43,9 @@
                 <h1>PLAY ALÍ</h1>            
             </div>
             <div role="main" class="ui-content">
-               <canvas id="canvasahorcado" width="320" height="250">
+               <canvas id="micanvas" width="320" height="250">
                    El Ahorcado sólo funciona en navegadores que soporten Canvas. Actualízate a Firefox o Chrome, por poner dos posibilidades.
                 </canvas>
-                <div id="letras"></div>
-                <div id="botonesletras"></div>
             </div>
         </div>
     </body>
