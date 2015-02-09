@@ -21,7 +21,7 @@ window.onload = function(){
    //Recibimos el elemento canvas
    var ctx = cargaContextoCanvas('micanvas');
    ctx.fillStyle="#333";
-   ctx.font="bold 64px sans-serif";
+   ctx.font="bold 20px sans-serif";
    ctx.textBaseline="top";
    ctx.fillText('Puntaje: 0',5, 10);
    if(ctx){
@@ -42,7 +42,7 @@ window.onload = function(){
             }else{
                x = x + 5;
             }
-            ctx.drawImage(img, x, 50);
+            ctx.drawImage(img, x, 100);
          }
       }
    }
@@ -55,6 +55,6 @@ $(document).ready(function(){
       num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
-      document.body.appendChild(boton);
+      $("#botonnum").append(boton);
    }
 });
