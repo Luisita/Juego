@@ -22,11 +22,11 @@ window.onload = function(){
    var ctx = cargaContextoCanvas('micanvas');
    if(ctx){
       //Creo una imagen conun objeto Image de Javascript
-      var imagenes=['fresa.jpg','manzana.jpg','naranja.jpg','pera.jpg','uva.jpg']
+      var imagenes=['fresa','manzana','naranja','pera','uva']
       var imagen = imagenes[aleatorio(0,imagenes.length-1)]      
       var img = new Image();
       //indico la URL de la imagen
-      img.src = 'img/'+imagen;
+      img.src = 'img/'+imagen+".png";
       //defino el evento onload del objeto imagen
       img.onload = function(){
          //incluyo la imagen en el canvas
