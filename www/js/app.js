@@ -68,7 +68,10 @@ window.onload = function(){
    }
 
    $("button").click(function(){
-      alert("boton");
+      div= document.getElementById("micanvas");.innerHTML;
+      partidos = div.match(/<img/);
+      numMatches = matches.length;
+      alert(numMatches);
    });
 
 }
