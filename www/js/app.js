@@ -1,4 +1,4 @@
-var num3 = 0;
+var num_3 = 0;
 
 function cargaContextoCanvas(idCanvas){
    var elemento = document.getElementById(idCanvas);
@@ -36,9 +36,9 @@ window.onload = function(){
       //defino el evento onload del objeto imagen
       img.onload = function(){
          //incluyo la imagen en el canvas
-         num3 = Math.floor((Math.random() * 4) + 1);
+         num_3 = Math.floor((Math.random() * 4) + 1);
          x = 0;
-         for(i=0; i<num2; i++){
+         for(i=0; i<num_3; i++){
             if(i!=0){
                x = x+80;
             }else{
@@ -51,13 +51,12 @@ window.onload = function(){
 }
 
 $(document).ready(function(){
-   num = Math.floor((Math.random() * 10) + 1);
-   num2 = Math.floor((Math.random() * 4) + 1);
+   var num2 = Math.floor((Math.random() * 4) + 1);
    for(i=0;i<num2;i++){
-      num = Math.floor((Math.random() * 10) + 1);
+      var num = Math.floor((Math.random() * 10) + 1);
       var boton = document.createElement("button");
       boton.type = "button";
-      var t = document.createTextNode(num3);
+      var t = document.createTextNode(num_3);
       boton.appendChild(t);
       $("#botonnum").append(boton);
    }
