@@ -70,12 +70,16 @@ window.onload = function(){
          t = document.createTextNode(num);
       }
       boton.appendChild(t);
+      var element = document.getElementById("b"+i);
+      element.appendChild(boton);
       $("#botonnum").append(boton);
    }
 
-   $("button").click(function(){
-      numero = document.getElementsByTagName("button");
-      alert(numero);
-   });
+   for (i=0; i<4;i++){
+      $("#b"+i).click(function(){
+         numero = document.getElementsByName("b"+i);
 
+         alert(numero);
+      });
+   }
 }
