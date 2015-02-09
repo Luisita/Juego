@@ -30,7 +30,17 @@ window.onload = function(){
       //defino el evento onload del objeto imagen
       img.onload = function(){
          //incluyo la imagen en el canvas
-         ctx.drawImage(img, 10, 10);
+         num = Math.floor((Math.random() * 10) + 1);
+         num2 = Math.floor((Math.random() * 5) + 1);
+         x = 0;
+         for(i=0; i<num2; i++){
+            if(i!=0){
+               x = x+80;
+            }else{
+               x = x + 10;
+            }
+            ctx.drawImage(img, x, 10);
+         }
       }
    }
 }
