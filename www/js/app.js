@@ -19,7 +19,7 @@ function aleatorio(inferior,superior){
 }
 
 
-window.onload = function(){
+function Listo(){
    //Recibimos el elemento canvas
    var ctx = cargaContextoCanvas('micanvas');
    ctx.fillStyle="#333";
